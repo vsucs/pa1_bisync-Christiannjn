@@ -22,11 +22,11 @@ public class BISYNC {
     return body;
   }
 
-  public static void main(String[] args){
+public static void main(String[] args){
     if(args.length < 2)
       System.out.println("Usage: java BISYNC [input path] [output path]");
     else{
-      String inputPath = args[0];
+      String inputPath = args[0]; 
       String outputPath = args[1];
 
       byte[] array = {};
