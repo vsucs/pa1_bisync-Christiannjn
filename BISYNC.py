@@ -9,16 +9,19 @@ def print_byte_codes(data):
       print()
 
 def bisync_body(data):
-  body = b""
-  #put your code here
-  return body
+ # escalping
+ body = data.replace(b'\x10',b'\x10\x10')
+ body = body.replace(b'\x02',b'\x10\x02')
+ body = body.replace(b'\x03',b'\x10\x03') 
+
+ return body;
 
 if __name__ == "__main__":
   # execute only if run as a script
   if len(sys.argv) < 3:
     print(f"Usage: {sys.argv[0]} [input path] [output path]")
   else:
-    input_path = sys.argv[1]
+    input_path = sys.argv[1] 
     output_path = sys.argv[2]
     
     # read data
