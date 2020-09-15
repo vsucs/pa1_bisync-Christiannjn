@@ -10,10 +10,11 @@ def print_byte_codes(data):
 
 def bisync_body(data):
  # escalping
- body = body.replace(b'\x10',b'\x10\x10')
+ body = data.replace(b'\x10',b'\x10\x10')
  body = body.replace(b'\x02',b'\x10\x02')
  body = body.replace(b'\x03',b'\x10\x03') 
-  return body
+
+ return body;
 
 if __name__ == "__main__":
   # execute only if run as a script
